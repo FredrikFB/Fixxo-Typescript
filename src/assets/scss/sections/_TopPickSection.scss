@@ -1,0 +1,98 @@
+.top-picks{
+    .container{
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        .banner{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #75695C;
+            width: 100%;
+            max-width: 825px;
+            min-height: 353px;
+            img{
+                display: none;
+
+            }
+            .banner-text{
+
+                h2{
+                    font-size: 45px;
+                    font-weight: $font-weight-bold;
+                    color: $color-white;
+                }
+            }
+        }
+        .banner2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #D9D9D9;
+            width: 100%;
+            max-width: 825px;
+            min-height: 353px;
+            img{
+                display: none;
+
+            }
+            .banner-text{
+
+                h2{
+                    font-size: 45px;
+                    font-weight: $font-weight-bold;
+                    color: $color-white;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 1200px){
+    .top-picks{
+        .container{
+            .banner{
+                position: relative;
+                background-color: white;
+                img{
+                    display: block;
+                    max-width: 815px;
+                }
+                .banner-text{
+                    position: absolute;
+                    text-align: left;
+                    right: 25px;
+                }
+            }
+            .banner2{
+                position: relative;
+                background-color: white;
+                img{
+                    display: block;
+                    max-width: 815px;
+                }
+                .banner-text{
+                    position: absolute;
+                    text-align: left;
+                    left: 40px;
+
+                    h2{
+                        color: $color-darkblue;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width: 1600px){
+    .top-picks{
+        .container{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+}

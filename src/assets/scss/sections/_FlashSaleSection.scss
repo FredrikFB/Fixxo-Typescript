@@ -1,0 +1,166 @@
+.flash-sale-left{
+    margin-top: 60px;
+    margin-bottom: 60px;
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        
+
+        .square{
+            position: relative;
+            text-align: center;
+            align-items: center;
+            background-color: #BBBBBB;
+            width: 100%;
+            max-width: 820px;
+            max-height: 620px;
+            margin-bottom: 20px;
+            &::after{
+                content: '';
+                display: block;
+                padding-top: 90%;
+            }
+            .square-text{
+                position: absolute;
+                width: 100%;
+                top: 40%;
+                h2{
+                    color: $color-white;
+                    font-size: clamp(25px,16px + 5vw, 45px);
+                    font-weight: $font-weight-bold;
+                }
+            }
+        }
+        .liten{
+            width: 85%;
+            margin-left: 10px;
+            .card-body{
+                text-align: left;
+            }
+        }
+    }
+}
+.flash-sale-right{
+    margin-top: 60px;
+    margin-bottom: 60px;
+    .container{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+
+        
+
+        .square{
+            position: relative;
+            text-align: center;
+            align-items: center;
+            background-color: #BBBBBB;
+            width: 100%;
+            max-width: 820px;
+            max-height: 620px;
+            margin-bottom: 20px;
+            &::after{
+                content: '';
+                display: block;
+                padding-top: 90%;
+            }
+            .square-text{
+                position: absolute;
+                width: 100%;
+                top: 40%;
+                h2{
+                    color: $color-white;
+                    font-size: clamp(25px,16px + 5vw, 45px);
+                    font-weight: $font-weight-bold;
+                }
+            }
+        }
+        .liten{
+            width: 85%;
+            margin-left: 10px;
+            text-align: center;
+            .card-body{
+                text-align: left;
+            }
+        }
+    }
+}
+@media (min-width: 1600px){
+    .flash-sale-left{
+        margin-top: 60px;
+        margin-bottom: 60px;
+        .container{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+    
+            
+    
+            .square{
+                position: relative;
+                text-align: center;
+                align-items: center;
+                background-color: #BBBBBB;
+                max-width: 820px;
+                max-height: 620px;
+                margin-top: 12px;
+                &::after{
+                    content: '';
+                    display: block;
+                    padding-top: 90%;
+                }
+                .square-text{
+                    position: absolute;
+                    width: 100%;
+                    top: 40%;
+                }
+            }
+            .liten{
+                width: 65%;
+                margin-left: 10px;
+                .card-body{
+                    text-align: left;
+                }
+            }
+        }
+    }
+
+    .flash-sale-right{
+        margin-top: 60px;
+        margin-bottom: 60px;
+        .container{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-items: end;
+            .square{
+                position: relative;
+                text-align: center;
+                align-items: center;
+                background-color: #BBBBBB;
+                max-width: 820px;
+                max-height: 620px;
+                margin-top: 12px;
+                &::after{
+                    content: '';
+                    display: block;
+                    padding-top: 90%;
+                }
+                .square-text{
+                    position: absolute;
+                    width: 100%;
+                    top: 40%;
+                }
+            }
+            .liten{
+                width: 65%;
+                margin-right: 10px;
+                .card-body{
+                    text-align: left;
+                }
+            }
+        }
+    }
+}

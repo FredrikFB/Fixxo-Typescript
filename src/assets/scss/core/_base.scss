@@ -1,0 +1,25 @@
+html, body{
+    font-family: $font-poppins;
+    font-weight: $font-weight-regular;
+    color: $color-darkblue;
+    font-size: 1rem;
+}
+
+a {
+    color: $color-red;
+    text-decoration: none;
+
+    &:hover{
+        color: $color-red;
+        text-decoration: underline;
+    }
+}
+.border{
+    border: 1px solid red !important;
+}
+
+@media (min-width: 1600px){
+    .container{
+        max-width: $max-width;
+    }
+}

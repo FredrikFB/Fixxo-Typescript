@@ -1,0 +1,136 @@
+.btn-theme{
+    position: relative;
+    text-align: center;
+    width: 200px;
+    background-color: $color-red;
+    color: $color-white;
+    padding: 13px 50px;
+    border: none;
+    height: 50px;
+    transition: all 0.2s ease-in-out;
+
+    &::before,
+    &::after{
+        position: absolute;
+        content: '';
+        width: 20px;
+        height: 20px;
+    }
+    &::before{
+        left: 8px;
+        top: 8px;
+        border-left: 1px solid $color-white;
+        border-top: 1px solid $color-white; 
+    }
+    &::after{
+        right: 8px;
+        bottom: 8px;
+        border-right: 1px solid $color-white;
+        border-bottom: 1px solid $color-white;
+    }
+
+    &:hover{
+        color: $color-white;
+        background-color: $color-darkblue;
+        text-decoration: none;
+    }
+}
+
+.btn-dark{
+    position: relative;
+    text-align: center;
+    width: 200px;
+    background-color: $color-darkblue;
+    color: $color-white;
+    padding: 13px 50px;
+    border: none;
+    height: 50px;
+    transition: all 0.2s ease-in-out;
+
+    &::before,
+    &::after{
+        position: absolute;
+        content: '';
+        width: 20px;
+        height: 20px;
+    }
+    &::before{
+        left: 8px;
+        top: 8px;
+        border-left: 1px solid $color-white;
+        border-top: 1px solid $color-white; 
+    }
+    &:hover:before{
+        left: 8px;
+        top: 8px;
+        border-left: 1px solid $color-darkblue;
+        border-top: 1px solid $color-darkblue; 
+    }
+    &::after{
+        right: 8px;
+        bottom: 8px;
+        border-right: 1px solid $color-white;
+        border-bottom: 1px solid $color-white;
+    }
+    &:hover:after{
+        right: 8px;
+        bottom: 8px;
+        border-right: 1px solid $color-darkblue;
+        border-bottom: 1px solid $color-darkblue;
+    }
+
+    &:hover{
+        color: $color-darkblue;
+        background-color: $color-white;
+        text-decoration: none;
+    }
+}
+.btn-white{
+    position: relative;
+    text-align: center;
+    width: 200px;
+    background-color: $color-white;
+    color: $color-darkblue;
+    padding: 13px 50px;
+    border: none;
+    height: 50px;
+    transition: all 0.2s ease-in-out;
+
+    &::before,
+    &::after{
+        position: absolute;
+        content: '';
+        width: 20px;
+        height: 20px;
+    }
+    &::before{
+        left: 8px;
+        top: 8px;
+        border-left: 1px solid $color-darkblue;
+        border-top: 1px solid $color-darkblue; 
+    }
+    &:hover:before{
+        left: 8px;
+        top: 8px;
+        border-left: 1px solid $color-white;
+        border-top: 1px solid $color-white; 
+    }
+    &::after{
+        right: 8px;
+        bottom: 8px;
+        border-right: 1px solid $color-darkblue;
+        border-bottom: 1px solid $color-darkblue;
+    }
+    &:hover:after{
+        right: 8px;
+        bottom: 8px;
+        border-right: 1px solid $color-white;
+        border-bottom: 1px solid $color-white;
+    }
+
+    &:hover{
+        color: $color-white;
+        background-color: $color-darkblue;
+        text-decoration: none;
+    }
+}

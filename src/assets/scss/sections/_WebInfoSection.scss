@@ -1,0 +1,42 @@
+.hr.container{
+    max-width: 1110px;
+    margin-bottom: 60px;
+}
+
+.web-info{
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+
+    .container{
+        max-width: 1110px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .info-box{
+        text-align: center;
+        max-width: 250px;
+        .info-text{
+            h2{
+                font-size: 20px;
+                font-weight: $font-weight-bold;
+
+            }
+            p{
+                font-size: 16px;
+                font-weight: $font-weight-regular;
+                margin: 0;
+            }
+        }
+    }
+}
+// @media (min-width: 1600px){
+//     .web-info{
+//         .container{
+//             display: flex;
+//             flex-direction: row;
+//             justify-content: space-between;
+//         }
+//     }
+// }
