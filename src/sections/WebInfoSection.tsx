@@ -4,7 +4,6 @@ import iconTruck from '../assets/images/icons/delivery.svg'
 import iconPayment from '../assets/images/icons/securedPayment.svg'
 import InfoIcons from '../components/InfoIcons'
 
-//{img, title, paragraph}
 const WebInfoSection = () => {
   return (
     <section>

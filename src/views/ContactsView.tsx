@@ -5,7 +5,7 @@ import FooterSection from '../sections/FooterSection'
 import MapSection from '../sections/MapSection'
 import ContactFormSection from '../sections/ContactFormSection'
 
-const ContactsView = () => {
+const ContactsView: React.FC = () => {
   document.title = 'Contacts | Fixxo.'
 
   return (

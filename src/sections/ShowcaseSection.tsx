@@ -1,8 +1,8 @@
 import React from 'react'
-import LeftImg from '../assets/images/placeholders/showcase-img-1.svg'
-import RightImg from '../assets/images/placeholders/showcase-img-2.svg'
+import { Link } from 'react-router-dom'
 
-const ShowcaseSection = () => {
+
+const ShowcaseSection: React.FC = () => {
   return (
     <section>
         <div className="showcase">
@@ -12,7 +12,7 @@ const ShowcaseSection = () => {
                     <h1 >SALE UP</h1>
                     <h1>To 50% Off</h1>
                     <p>Online shopping free home delivery over $100</p>
-                    <a href="#" className="btn-theme">SHOP NOW</a>
+                    <Link to="/products" className="btn-theme">SHOP NOW</Link>
                 </div>
                 <img src='https://win22imgstorage.blob.core.windows.net/images/showcase-img-2.png' className="img-right" alt="" />
             </div>

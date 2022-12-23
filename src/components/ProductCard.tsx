@@ -1,23 +1,16 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import {  Product} from '../models/Product'
+import { ShoppingCartType, useShoppingCartContext } from '../contexts/ShoppingCartContext'
+import { Product} from '../models/Product'
+import { currencyFormatter } from '../utilities/currencyFormatter'
 
+interface ProductType {
+    product: Product
+}
 
+const ProductCard: React.FC<ProductType> = ({product}) => {
+    const { incrementQuantity } = useShoppingCartContext() as ShoppingCartType
 
-const ProductCard: React.FC<{product: Product}> = ({product}) => {
-
-    // const addToWishList = (e) => {
-    //     console.log(`added to wish list`)
-    // }
-    // const addToCompare = (e) => {
-    //     console.log("added to compare")
-    // }
-    // const addToCart = (e) => {
-    //     console.log("added to shopping cart")
-    // }
-
-
-    // onClick={addToCart} onClick={addToCompare} onClick={addToWishList}
 
   return (
     <div className="col">
@@ -27,7 +20,7 @@ const ProductCard: React.FC<{product: Product}> = ({product}) => {
                 <div className="card-menu d-xl-none">
                     <button className="menu-link" ><i className="fa-regular fa-heart"></i></button>
                     <button className="menu-link" ><i className="fa-regular fa-code-compare fa-flip-horizontal"></i></button>
-                    <button className="menu-link" ><i className="fa-regular fa-bag-shopping"></i></button>
+                    <button onClick={() => incrementQuantity({articleNumber: product.articleNumber, product: product, quantity: 1})} className="menu-link" ><i className="fa-regular fa-bag-shopping"></i></button>
                 </div>
                 <NavLink to={`/products/${product.articleNumber}`} className="btn-card-theme btn-theme d-xl-none">
                     QUICK VIEW
@@ -44,7 +37,7 @@ const ProductCard: React.FC<{product: Product}> = ({product}) => {
                     <i className="fa-regular fa-star"></i>
                 </div>
                 <span className="old-price">{product.oldPrice}</span>
-                <span className="new-price">${product.price}</span>
+                <span className="new-price">{currencyFormatter(product.price)}</span>
             </div>
             <div className="card-background"></div>
         </div>

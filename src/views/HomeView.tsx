@@ -6,20 +6,19 @@ import ProductGridSection from '../sections/ProductGridSection'
 import FlashSaleSection from '../sections/FlashSaleSection'
 import WebInfoSection from '../sections/WebInfoSection'
 import FooterSection from '../sections/FooterSection'
-import { useProductContext } from '../contexts/ProductContext'
+import { IProductContextType, useProductContext } from '../contexts/ProductContext'
 
 
 
 
-const HomeView = () => {
+const HomeView: React.FC = () => {
   document.title = 'Fixxo.'
-  const {featured, getFeatured} = useProductContext()
-  const {products, getProducts} = useProductContext()
+  const {featured, getFeatured, getFlashSale, flashSale} = useProductContext() as IProductContextType
   
   useEffect(() => {
     getFeatured(8)
-    getProducts()
-  }, [])
+    getFlashSale(8)
+  }, [featured, flashSale])
 
   return (
     <>
@@ -27,7 +26,7 @@ const HomeView = () => {
       <ShowcaseSection />
       <ProductGridSection title="Featured Products" products={featured}/> 
       <TopPicksSection />
-      <FlashSaleSection products={products} />
+      <FlashSaleSection products={flashSale} />
       <WebInfoSection />
       <FooterSection />
     </>

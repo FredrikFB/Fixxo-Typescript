@@ -1,0 +1,38 @@
+.productlist.container{
+    display: flex;
+    justify-content: center;
+    max-width: 1110px;
+
+    .productlist-item{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 30px 20px;
+        width: 900px;
+        
+        .product-image{
+            height: 150px;
+            width: 200px;
+            margin-right: 20px;
+            background-color: $color-gray-10;
+            img{
+                height: 150px;
+                width: 200px;
+            }
+        }
+        .product-info{
+            flex: 2;
+            div{
+                font-weight: 500;
+                color: $color-darkblue;
+            }
+        }
+        .button{
+            // flex: 2;
+            button{
+                border: none;
+            }
+        }
+    
+    }
+}

@@ -2,8 +2,11 @@ import React from 'react'
 import ProductCard from '../components/ProductCard'
 import { Product} from '../models/Product'
 
+interface Props {
+    products: Product[]
+}
 
-const FlashSaleSection:React.FC<{products: Product[]}> = ({products}) => {
+const FlashSaleSection:React.FC<Props> = ({products}) => {
 
   return (
     <section>
@@ -18,7 +21,7 @@ const FlashSaleSection:React.FC<{products: Product[]}> = ({products}) => {
                 <div className="liten">
                     <div className="row row-cols-1 row-cols-md-2 g-4">
                         {
-                        products.slice(4, 8).map(product => <ProductCard key={product.articleNumber} product={product} />)
+                        products.slice(0, 4).map(product => <ProductCard key={product.articleNumber} product={product} />)
                         }
                     </div>
                 </div>
@@ -29,7 +32,7 @@ const FlashSaleSection:React.FC<{products: Product[]}> = ({products}) => {
                 <div className="liten">
                     <div className="row row-cols-1 row-cols-md-2 g-4">
                         {
-                        products.slice(9, 13).map(product => <ProductCard key={product.articleNumber} product={product} />)
+                        products.slice(4, 8).map(product => <ProductCard key={product.articleNumber} product={product} />)
                         }
                     </div>
                 </div>

@@ -3,7 +3,7 @@ import MainMenuSection from '../sections/MainMenuSection'
 import FooterSection from '../sections/FooterSection'
 import notFoundImg from '../assets/images/NotFound.jpg'
 
-const NotFoundView = () => {
+const NotFoundView: React.FC = () => {
   document.title = 'Not Found | Fixxo.'
   
   return (
